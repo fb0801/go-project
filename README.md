@@ -2,6 +2,8 @@
 Go beginner project
 
 
-Resources used: 
+
+
+## Resources used: 
 
 https://go.dev/dl/
