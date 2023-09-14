@@ -6,14 +6,28 @@ func main(){
 	fmt.Printf("Please enter your name: ")
 
 	var name string
-	var age int
+	
 
 	fmt.Scan(&name)
 
-	fmt.Println("Hello, %v, Welcome to the game",name )
+	fmt.Printf("Hello, %v, Welcome to the game\n", name)
 
-	fmt.Println("Enter your age: ")
+	var age uint
+	fmt.Printf("Enter your age: ")
 	fmt.Scan(&age)
 
-	fmt.Println(age >=18)
+	if age >= 18 {
+		fmt.Println("You are old enough to play")
+	} else {
+		fmt.Println("Comback later when your old enough")
+	}
+	var answer string	
+	fmt.Printf("What fruit is better, orange or pineapple? ")
+	fmt.Scan(&answer)
+
+	if answer == "pineapple" {
+		fmt.Println("Correct")
+	}else {
+		fmt.Println("Sorry not correct :(")
+	}
 }
