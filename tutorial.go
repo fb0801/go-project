@@ -6,7 +6,8 @@ func main(){
 	fmt.Printf("Please enter your name: ")
 
 	var name string
-	
+	score := 0
+	num_questions := 2
 
 	fmt.Scan(&name)
 
@@ -27,7 +28,20 @@ func main(){
 
 	if answer == "pineapple" {
 		fmt.Println("Correct")
+		score++
 	}else {
 		fmt.Println("Sorry not correct :(")
 	}
+
+	fmt.Printf("How many star wars movies are there? ")
+	var cores uint
+	fmt.Scan(&cores)
+
+	if cores == 6 {
+		fmt.Println("Correct")
+	}else {
+		fmt.Println("Sorry not correct :(")
+	}
+	
+	fmt.Printf("You scored %v out of %v", score, num_questions)
 }
