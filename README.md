@@ -1,5 +1,5 @@
 # go-project
-Go beginner project
+Go beginner project of building a quiz
 
 
 
