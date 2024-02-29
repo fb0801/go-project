@@ -1,20 +1,24 @@
 package main
 
 import (
+	"fmt"
+	"log"
+	"os"
+
 	"github.com/urfave/cli/v2"
 )
 
-func main(){
+func main() {
 	app := &cli.App{
-		Name: "healtherchecker",
-		Usage: "tool to check website status",
-		Flags:[]cli.Flag{
-			&cli.Flag{
-				Name: "domain",
-				Aleases:{}string{'d'},
-				Usage: "domain name",
+		Name:  "Healthchecker",
+		Usage: "A tiny tool that checks the given domain is down.",
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:     "domain",
+				Aliases:  []string{"d"},
+				Usage:    "Domain name to check.",
 				Required: true,
-			}
+			},
 			&cli.StringFlag{
 				Name:     "port",
 				Aliases:  []string{"p"},
