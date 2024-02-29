@@ -1,5 +1,5 @@
 # go-project
-Go beginner project of building a quiz
+Go beginner project of building a quiz and more
 
 
 
@@ -10,3 +10,4 @@ https://www.youtube.com/watch?v=LHhsNa_Kgns&pp=ygULZ28gdHV0b3JpYWw%3D
 
 https://go.dev/dl/
 
+https://www.youtube.com/watch?v=k_V5VvYSlS4 
