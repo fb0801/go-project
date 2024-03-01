@@ -1,7 +1,11 @@
 # go-project
-Go beginner project of building a quiz and more
+Go beginner project of building a quiz and many more
+
+## Issues:
 
 
+
+## changes made:
 
 
 ## Resources used: 
@@ -12,4 +16,8 @@ https://go.dev/dl/
 
 https://www.youtube.com/watch?v=k_V5VvYSlS4 
 
+https://www.toptal.com/developers/gitignore/
+
 original repo -> https://github.com/AkhilSharma90/go-health-checker
+
+original repo -> https://github.com/AkhilSharma90/go-file-encrypt
