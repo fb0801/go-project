@@ -62,9 +62,18 @@ func decryptHandle(){
 
 }
 
-func getPassword() {
-
+func getPassword() []byte {
+	fmt.Print("Enter password: ")
+	password, _ := terminal.ReadPassword(0)
+	fmt.Print("\nConfirm password: ")
+	password2, _ := terminal.ReadPassword(0)
+	if !validatePassword(password, password2) {
+		fmt.Print("\nPasswords do not match. Please try again.\n")
+		return getPassword()
+	}
+	return password
 }
+
 
 func validatePassword(){
 
