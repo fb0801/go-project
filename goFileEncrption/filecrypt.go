@@ -40,10 +40,25 @@ func printHelp(){
 }
 
 func encryptHandle() {
+	if len(os.Args) < 3 {
+		println("Missing the path to the file. For more information run CryptoGo help")
+		os.Exit(0)
+	}
 
+	file := os.Args[2]
+
+	if !validateFile(file) {
+		panic("File not found")
+	}
+
+	password := getPassword()
+
+	fmt.Println("\nEncrypting...")
+	filecrypt.Encrypt(file, password)
+	fmt.Println("\nFile successfully protected")
 }
 
-function decryptHandle(){
+func decryptHandle(){
 
 }
 
@@ -56,5 +71,9 @@ func validatePassword(){
 }
 
 func validateFile(){
-	
+	if _, err := os.Stat(file); os.IsNotExist(err) {
+		return false
+	}
+
+	return true
 }
