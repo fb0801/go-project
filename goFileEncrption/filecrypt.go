@@ -59,6 +59,23 @@ func encryptHandle() {
 }
 
 func decryptHandle(){
+	if len(os.Args) < 3 {
+		println("Missing the path to the file. For more information run CryptoGo help")
+		os.Exit(0)
+	}
+
+	file := os.Args[2]
+
+	if !validateFile(file) {
+		panic("File not found")
+	}
+
+	fmt.Print("Enter password: ")
+	password, _ := terminal.ReadPassword(0)
+
+	fmt.Println("\nDecrypting...")
+	filecrypt.Decrypt(file, password)
+	fmt.Println("\nFile successfully decrypted.")
 
 }
 
