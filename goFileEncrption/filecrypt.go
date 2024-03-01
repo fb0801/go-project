@@ -1,6 +1,14 @@
 package main
 
-import 
+import (
+	"bytes"
+	"fmt"
+	"os"
+
+	"github.com/akhilsharma90/file-encrypt/filecrypt"
+
+	"golang.org/x/crypto/ssh/terminal"
+)
 
 func main(){
 	if len(os.Args) < 2{
@@ -92,8 +100,12 @@ func getPassword() []byte {
 }
 
 
-func validatePassword(){
+func validatePassword(password1 []byte, password2 []byte) bool {
+	if !bytes.Equal(password1, password2) {
+		return false
+	}
 
+	return true
 }
 
 func validateFile(){
