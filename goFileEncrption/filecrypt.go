@@ -23,5 +23,38 @@ func main(){
 }
 
 func printHelp(){
+	fmt.Println("CryptoGo")
+	fmt.Println("Simple file encrypter for your day-to-day needs.")
+	fmt.Println("")
+	fmt.Println("Usage:")
+	fmt.Println("")
+	fmt.Println("\tCryptoGo encrypt /path/to/your/file")
+	fmt.Println("")
+	fmt.Println("Commands:")
+	fmt.Println("")
+	fmt.Println("\t encrypt\tEncrypts a file given a password")
+	fmt.Println("\t decrypt\tTries to decrypt a file using a password")
+	fmt.Println("\t help\t\tDisplays help text")
+	fmt.Println("")
 
+}
+
+func encryptHandle() {
+
+}
+
+function decryptHandle(){
+
+}
+
+func getPassword() {
+
+}
+
+func validatePassword(){
+
+}
+
+func validateFile(){
+	
 }
