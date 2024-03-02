@@ -21,3 +21,6 @@ https://www.toptal.com/developers/gitignore/
 original repo -> https://github.com/AkhilSharma90/go-health-checker
 
 original repo -> https://github.com/AkhilSharma90/go-file-encrypt
+
+original repo -> https://github.com/AkhilSharma90/simple-encryption-decryption-GO
+
