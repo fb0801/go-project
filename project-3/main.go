@@ -50,6 +50,7 @@ func decrypt(key int, encrypttedText string) (result string) {
 
 func main() {
 	plainText := "HELLOWORLD"
+	
 	fmt.Println("Plain Text", plainText)
 	encrypted := encrypt(5, plainText)
 	fmt.Println("Encrypted", encrypted)
