@@ -11,5 +11,7 @@ func main() {
 	fmt.Println("hello world")
 	app := fiber.New()
 
+	app.Get("/", func(c *fiber.Ctx))
+
 	log.Fatal(app.Listen(":4000"))
 }
