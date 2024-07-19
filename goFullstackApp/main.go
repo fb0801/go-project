@@ -61,12 +61,10 @@ func main() {
 			if fmt.Sprint(todo.ID) == id {
 				todos = append(todos[:1], todos[i+1:]...)
 				return c.Status(200).JSON(fiber.Map{"success": true})
-
-			
 			}
-		return c.Status(404).JSON(fiber.Map{"error": "Todo not found"})
 
 		}
+		return c.Status(404).JSON(fiber.Map{"error": "Todo not found"})
 	})
 
 
