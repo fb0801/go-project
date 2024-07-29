@@ -39,4 +39,20 @@ func main(){
 		log.Fatal(err)
 	}
 	fmt.Println("Connected to MongoDB")
+
+	collection = client.Database("goland_db").Collection("todos")
+
+	app := fiber.New()
+
+	app.Get("/api/todos", getTodos)
+	app.Get("/api/todos", createTodos)
+	app.Get("/api/todos/:id", updateTodos)
+	app.Get("/api/todos/:id", deleteTodos)
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "5000"
+	}
+	log.Fatal(app.Listen("0.0.0.0" + port))
+	
 }
