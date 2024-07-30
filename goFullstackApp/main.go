@@ -128,5 +128,11 @@ func deleteTodos(c *fiber.Ctx) error{
 		return c.Status(400).JSON(fiber.Map{"error":"Invalid todo ID"})
 	}
 	filter := bson.M{"_id":objectsID}
-	collection.DeleteOne(context.Background(),filter)
+	_,err = collection.DeleteOne(context.Background(),filter)
+
+	if err != nil{
+		return err
+	}
+	return c.Status(200).JSON(fiber.Map{"success": true})
+
 }
