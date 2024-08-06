@@ -50,10 +50,10 @@ func main(){
 
 	app := fiber.New()
 
-	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:5173",
-		AllowHeaders: "Origin,Content-Type,Accept",
-	}))
+//	app.Use(cors.New(cors.Config{
+//		AllowOrigins: "http://localhost:5173",
+//		AllowHeaders: "Origin,Content-Type,Accept",
+//	}))
 
 	app.Get("/api/todos", getTodos)
 	app.Get("/api/todos", createTodos)
@@ -67,6 +67,8 @@ func main(){
 	log.Fatal(app.Listen("0.0.0.0" + port))
 
 }
+
+if os.Getenv
 
 func getTodos(c *fiber.Ctx) error{
 	var todos []Todo
