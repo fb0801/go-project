@@ -25,10 +25,14 @@ var collection *mongo.Collection
 func main(){
 	fmt.Println("hello world")
 
-	err:= godotenv.Load(".env")
-	if err != nil{
-		log.Fatal("Error loading .env file", err)
+	if os.Getenv("ENV") != "production"{
+		err:= godotenv.Load(".env")
+		if err != nil{
+			log.Fatal("Error loading .env file", err)
+		}
 	}
+
+	
 
 	MONGODB_URI:= os.Getenv("MONGODB_URI")
 	clientOptions := options.Client().ApplyURI(MONGODB_URI)
